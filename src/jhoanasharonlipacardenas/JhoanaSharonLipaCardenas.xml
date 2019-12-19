@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ventas SYSTEM "reservasDTD.dtd">
+
+<reservas>
+    <reserva c_res="r1" c_cliente="c1" c_hotel="h1" f_inicio="11/05/2005" f_fin="15/05/2005">
+        <cliente>
+            <nombre>pepe</nombre>
+            <dni>5012</dni>
+            <telefono>91222</telefono>
+        </cliente>
+        <hotel restaurante="si">
+            <estrellas>5</estrellas>
+            <nom_hotel>ritz</nom_hotel>
+            <ciudad>madrid</ciudad>		
+        </hotel>
+    </reserva>
+    
+    <reserva c_res="r2" c_cliente="c2" c_hotel="h2" f_inicio="06/06/2005" f_fin="15/06/2005">
+        <cliente>
+            <nombre>luis</nombre>
+            <dni>3456</dni>
+            <telefono>4578</telefono>
+        </cliente>
+        <hotel>
+            <estrellas>4</estrellas>
+            <nom_hotel>nh logroño</nom_hotel>
+            <ciudad>logroño</ciudad>		
+        </hotel>
+    </reserva>
+    
+ <reserva c_res="r3" c_cliente="c3" c_hotel="h3" f_inicio="24/05/2005" f_fin="30/05/2005">
+        <cliente>
+            <nombre>marisa</nombre>
+            <dni>4588</dni>
+            <telefono>91833</telefono>
+        </cliente>
+        <hotel restaurante="si">
+            <estrellas>5</estrellas>
+            <nom_hotel>palace</nom_hotel>
+            <ciudad>barna</ciudad>		
+        </hotel>
+    </reserva>
+    
+</reservas>
+

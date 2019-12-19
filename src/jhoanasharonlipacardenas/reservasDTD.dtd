@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+1. Genera el DTD de la base de datos ‘reservas’, teniendo en cuenta las siguientes
+premisas: (3 ptos.)
+    • Los campos claves de las tablas tienes que almacenarse como atributos.
+    • Un cliente puede tener ninguno o varios teléfonos.
+    • En la tabla ‘reserva’, ‘cliente’ y ‘hotel’ serán referencias a los campos claves de las tablas.
+    • El campo ‘restaurante’ de la tabla ‘hotel’ sólo se mostrará si el hotel tiene restaurante.
+    Para ello de mostrará con el valor ‘sí’.
+    • En la reserva, la fecha de inicio es obligatoria. La fecha de fin, no.
+    • El resto de los campos serán elementos.
+
+2. A partir del DTD anterior, crear el fichero XML: (1 ptos.) (Si no se hace con el DTD
+anterior el ejercicio vale 0.5 puntos).
+    • Los campos claves de las tablas tienes que almacenarse como atributos.
+    • En la tabla ‘reserva’, ‘cliente’ y ‘hotel’ serán atributos.
+    • El campo ‘restaurante’ de la tabla ‘hotel’ se mostrará o no dependiendo de si el hotel
+    tiene restaurante. Para ello de mostrará con el valor ‘sí’.
+    • El resto de campos serán elementos.
+    • Inserta sólo un registro de cada tabla
+-->
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+
+
+	<!ELEMENT reservas (reserva+)>
+	<!ELEMENT reserva (cliente,d_hotel)>
+	<!ATTLIST planing c_res CDATA #REQUIRED>
+	<!ATTLIST planing c_cliente CDATA #REQUIRED>
+	<!ATTLIST planing c_hotel CDATA #REQUIRED>
+	<!ATTLIST planing f_inicio CDATA #REQUIRED>
+	<!ATTLIST planing f_fin CDATA #IMPLIED>
+	
+	<!ELEMENT cliente (nombre,dni,telefono*)>
+		<!ELEMENT nombre (#PCDATA)>
+		<!ELEMENT dni (#PCDATA)>
+		<!ELEMENT telefono (#PCDATA)>
+	
+	
+	<!ELEMENT d_hotel (estrellas,nom_hotel,ciudad)>
+	<!ATTLIST d_hotel restaurante CDATA #REQUIRED>
+		<!ELEMENT estrellas (#PCDATA)>
+		<!ELEMENT nom_hotel (#PCDATA)>
+		<!ELEMENT ciudad (#PCDATA)>
+		
+
+
+
